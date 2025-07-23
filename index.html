@@ -438,92 +438,85 @@
       font-weight: 600;
     }
     
-    @media print {
-      body {
-        background: white;
-        padding: 0;
-        font-size: 10px;
-      }
-      
-      .container {
-        box-shadow: none;
-        border-radius: 0;
-        max-width: 100%;
-        padding: 0;
-        margin: 0;
-      }
-      
-      .search-section {
-        display: none;
-      }
-      
-      .result-container {
-        display: flex !important;
-        page-break-after: avoid;
-        height: 100vh;
-      }
-      
-      .school-header, .exam-info-section {
-        display: flex !important;
-        padding: 8px 10px;
-      }
-      
-      .emblem {
-        width: 30px;
-        height: 30px;
-      }
-      
-      .emblem i {
-        font-size: 16px;
-      }
-      
-      .academy-name {
-        font-size: 14px;
-      }
-      
-      .academy-tagline, .academy-details {
-        font-size: 8px;
-      }
-      
-      .student-name {
-        font-size: 14px;
-      }
-      
-      .marks-table {
-        font-size: 9px;
-        margin: 5px 0 8px;
-      }
-      
-      .marks-table th, .marks-table td {
-        padding: 4px 6px;
-      }
-      
-      .summary-card {
-        padding: 6px;
-      }
-      
-      .summary-title {
-        font-size: 8px;
-      }
-      
-      .summary-value {
-        font-size: 12px;
-      }
-      
-      .note {
-        font-size: 8px;
-        padding: 8px 10px;
-      }
-      
-      .footer {
-        padding: 8px;
-        font-size: 7px;
-      }
-      
-      .signature-line {
-        margin: 15px 0 4px;
-      }
-    }
+ @media print {
+  body {
+    background: white;
+    padding: 5mm;
+    font-size: 10px;
+    height: 100%;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    transform: scale(0.98);
+    transform-origin: top center;
+  }
+
+  /* Header adjustments */
+  .school-header, .exam-info-section {
+    padding: 5px 10px;
+    display: flex !important;
+  }
+  
+  .emblem {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .emblem i {
+    font-size: 16px;
+  }
+  
+  .academy-name {
+    font-size: 14px;
+  }
+  
+  .academy-tagline, .academy-details {
+    font-size: 8px;
+  }
+
+  /* Table adjustments */
+  .marks-table {
+    font-size: 9px;
+    margin: 5px 0;
+  }
+  
+  .marks-table th, 
+  .marks-table td {
+    padding: 3px 5px;
+  }
+
+  /* Signature area - centered */
+  .signature-area {
+    width: 80%;
+    margin: 5px auto 0;
+    padding: 0;
+  }
+  
+  .signature-line {
+    margin: 15px 0 4px;
+  }
+
+  /* Footer */
+  .footer {
+    width: 80%;
+    margin: 5px auto;
+    padding: 3px 0;
+    font-size: 8px;
+  }
+
+  /* Hide elements */
+  button, input, label,
+  .search-section,
+  .browser-notice {
+    display: none !important;
+  }
+ }
     
     @media (min-width: 768px) {
       .summary {
