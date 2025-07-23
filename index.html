@@ -406,37 +406,47 @@
 }
 
 @media print {
-  .footer {
-    width: 80%;
-    margin: 5px auto 0;
-    padding: 5px 0;
-    font-size: 8px;
-    position: static;
-    background: #0d1b48;
-    color: white;
-    border-radius: 3px;
-  }
-  
+  /* ... (keep all other print styles the same) ... */
+
+  /* Signature area - proper two-column layout */
   .signature-area {
-    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 5px;
+    padding: 0 5%;
   }
   
-  .result-section {
-    padding-bottom: 5px;
+  .signature-box {
+    width: 45%;
+    text-align: center;
   }
+  
+  .signature-box:first-child {
+    text-align: left;
+    padding-left: 5%;
+  }
+  
+  .signature-box:last-child {
+    text-align: right;
+    padding-right: 5%;
+  }
+  
+  .signature-line {
+    width: 80%;
+    margin: 20px 0 5px;
+    height: 1px;
+    background: #333;
+    display: inline-block;
+  }
+  
+  .signature-label {
+    font-size: 9px;
+    font-weight: bold;
+  }
+
+  /* ... (rest of your print styles) ... */
 }
-    
-    .signature-line {
-      height: 1px;
-      background: #333;
-      margin: 20px 0 6px;
-    }
-    
-    .signature-label {
-      font-size: 10px;
-      color: #1a3a7e;
-      font-weight: 600;
-    }
     
  @media print {
   body {
@@ -630,8 +640,8 @@
           <div class="note-title"><i class="fas fa-exclamation-circle"></i> Important Note:</div>
           <p>This is the result of 1st Terminal Examination 2082 B.S. Students or guardians can contact the school administration for any queries regarding the result. To verify this result, please visit the school as soon as possible. Regular office hours: 10:00 AM to 4:00 PM (Sunday to Friday).</p>
         </div>
-        
-     <!-- Signature Area -->
+
+        <!-- Signature Area -->
 <div class="signature-area">
   <div class="signature-box">
     <div class="signature-line"></div>
