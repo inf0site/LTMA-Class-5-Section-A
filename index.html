@@ -394,29 +394,37 @@
     .note-title i {
       font-size: 11px;
     }
-    
     /* Footer */
-    .footer {
-      background: #0d1b48;
-      color: rgba(255, 255, 255, 0.8);
-      text-align: center;
-      padding: 10px;
-      font-size: 9px;
-    }
-    
-    /* Signature Area */
-    .signature-area {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 15px 8px;
-      border-top: 1px dashed #ccc;
-      margin-top: 4px;
-    }
-    
-    .signature-box {
-      text-align: center;
-      width: 45%;
-    }
+.footer {
+  background: #0d1b48;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 8px;
+  font-size: 9px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media print {
+  .footer {
+    width: 80%;
+    margin: 5px auto 0;
+    padding: 5px 0;
+    font-size: 8px;
+    position: static;
+    background: #0d1b48;
+    color: white;
+    border-radius: 3px;
+  }
+  
+  .signature-area {
+    margin-bottom: 5px;
+  }
+  
+  .result-section {
+    padding-bottom: 5px;
+  }
+}
     
     .signature-line {
       height: 1px;
